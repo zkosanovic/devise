@@ -3,7 +3,7 @@ $body-bg: {{ if .Param "style.backgroundColor" }}{{ .Param "style.backgroundColo
 $body-color: {{ if .Param "style.fontColor" }}{{ .Param "style.fontColor"}}{{ else }}#212529{{ end }};
 $home-image-border-color: {{ if .Param "style.homeImageBorderColor" }}{{ .Param "style.homeImageBorderColor"}}{{ else }}#ffffff{{ end }};
 $font-family-base: {{ if .Param "style.fontFamilyBase"}}{{ .Param "style.fontFamilyBase"}},{{end}}"Helvetica Neue", Arial, sans-serif;
-$font-size-base: 0.95rem;
+$font-size-base: 1rem;
 @import "../../node_modules/bootstrap/scss/bootstrap";
 
 // === Import Font Awesome ===
@@ -23,8 +23,8 @@ $fa-font-path: "../webfonts";
 }
 
 #home-image {
-  width: 120px;
-  height: 120px;
+  width: 160px;
+  height: 160px;
   border: solid 5px $home-image-border-color;
   box-shadow: 0px 10px 7px -10px rgba(0,0,0,0.6);
   border-radius: 0.20rem;
@@ -119,6 +119,14 @@ blockquote:before {
 
 blockquote p {
   display: inline;
+}
+
+.subtitle {
+  font-size: 1.25em;
+}
+
+#nav-social {
+  font-size: 1.75em;
 }
 
 // === Media breakpoints ===

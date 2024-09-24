@@ -1,7 +1,7 @@
 <header class="container mt-sm-5 mt-4 mb-4 mt-xs-1">
     <div class="row">
         {{ if isset .Site.Params "home_image" }}
-        <div class="col-sm-4 col-12 text-sm-right text-center pt-sm-4">
+        <div class="col-sm-4 col-12 text-sm-right text-center">
             <a href="/" class="text-decoration-none">
                 <img id="home-image" class="rounded-circle"
                     {{ if (and (isset .Site.Params "home_image") (fileExists (printf "static/%s" (strings.TrimPrefix "/" .Site.Params.home_image)))) }}
@@ -29,7 +29,7 @@
                     {{ end }}
                 </a>
             </h2>
-            <p class="text-muted mb-1">
+            <p class="text-muted mb-1 subtitle">
                 {{ if isset .Site.Params "header_subtitle" }}
                     {{ .Site.Params.header_subtitle }}
                 {{ else }}
