@@ -129,6 +129,10 @@ blockquote p {
   font-size: 1.75em;
 }
 
+.list-inline-item:not(:last-child) {
+  margin-right: 1rem;
+}
+
 // === Media breakpoints ===
 // 576px
 @include media-breakpoint-up(sm) {}
