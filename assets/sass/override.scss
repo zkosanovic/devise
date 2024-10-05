@@ -133,6 +133,10 @@ blockquote p {
   margin-right: 1rem;
 }
 
+.list-inline-item:hover {
+  filter: drop-shadow(1px 1px 2px #bababa);
+}
+
 // === Media breakpoints ===
 // 576px
 @include media-breakpoint-up(sm) {}
