@@ -1,7 +1,10 @@
 {{ define "main" }}
-    <div class="pl-sm-4 ml-sm-5">
-        {{ .Content }}
-    </div>
 
-    {{ template "_internal/disqus.html" . }}
-{{ end }}
+<h3 class="mb-2">{{ .Title }}</h3>
+<div class="mb-4 meta-stuff">
+  Posted on {{ .Date | time.Format ":date_medium" }} &middot; Reading time: {{ .ReadingTime }} minutes
+</div>
+
+<div class="pl-sm-4 ml-sm-5 content">{{ .Content }}</div>
+
+{{ template "_internal/disqus.html" . }} {{ end }}
